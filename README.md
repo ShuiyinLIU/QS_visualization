@@ -5,19 +5,19 @@ Program: https://github.com/FePhyFoFum/quartetsampling
 
 Publication: James B Pease, Joseph W Brown, Joseph F Walker, Cody E Hinchliff, Stephen A Smith. 2018. Quartet Sampling distinguishes lack of support from conflicting support in the green plant tree of life. American Journal of Botany. 105(3): 385–403. doi:10.1002/ajb2.1016
 
-# R packages are required before running this script
+## R packages are required before running this script
 
 In R or Rstudio Console, use following codes to check if these required packages have been installed:
 
-$ require(ggtree)
+"""$ require(ggtree)
 $ require(treeio)
 $ require(ggplot2)
 $ require(ape)
-$ require(optparse)
+$ require(optparse)"""
 
 If any package is not installed, you can use "install.packages()" or "devtools::install_github()" for installing.
 
-# Usage: Rscript plot_QC_ggtree.R [options]
+## Usage: Rscript plot_QC_ggtree.R [options]
 
 Run this R script in  R/Rstudio Terminal, or on the terminal of your local computer with "Rscript.exe" into environment variable.
 
@@ -82,7 +82,7 @@ Options:
 
 Totally, there are 14 arguments, the former three are mandatory required argruments (i.e., the QC, QD, and QI labeled tree files), and the remaining are optional.
 
-# Testing, and exemplified commands
+## Testing, and exemplified commands
 In directory "example/", quartet sampling outputs for a 188-taxon dataset of one oak clade are provided, and you can use them for testing. Some exemplified commands：
 #only set parameter value for three mandatory required argruments, and use defaults for plotting.
 
@@ -100,5 +100,5 @@ $ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.la
 
 $ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi -o ./example --pdfwidth 8 --pdfheight 11 --branchlength branch.length --branchsize 1 --tiplabsize 2 --nodepointsize 4 --qstextsize 2 --qstextvjust -0.5 --xlimmin 0 --xlimmax 0.13
 
-# Marks
+## Marks
 The original script "plot_QC_ggtree.R" was written three years ago, and is a little rough. Thanks a lot for many peoples, who use this script and report "bug" or "error" to me. With these useful feedbacks, I recently re-wrote this script, fixed known bugs, changed its usage with a command line in terminal, and added a bunch of arguments for custom plot settings for users' own dataset (with a few tips/species or over hundreds of tips/species). Any bug that you find and reported here is welcomed!   
