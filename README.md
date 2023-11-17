@@ -9,11 +9,13 @@ Publication: James B Pease, Joseph W Brown, Joseph F Walker, Cody E Hinchliff, S
 
 In R or Rstudio Console, use following codes to check if these required packages have been installed:
 
-"""$ require(ggtree)
+"""
+$ require(ggtree)
 $ require(treeio)
 $ require(ggplot2)
 $ require(ape)
-$ require(optparse)"""
+$ require(optparse)
+"""
 
 If any package is not installed, you can use "install.packages()" or "devtools::install_github()" for installing.
 
@@ -23,7 +25,7 @@ Run this R script in  R/Rstudio Terminal, or on the terminal of your local compu
 
 Run below code for help information on how to use this script, and understand its arguments.
 
-$ Rscript plot_QC_ggtree.R -h
+'$ Rscript plot_QC_ggtree.R -h'
 
 Options:
 
