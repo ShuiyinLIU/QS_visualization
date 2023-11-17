@@ -9,13 +9,11 @@ Publication: James B Pease, Joseph W Brown, Joseph F Walker, Cody E Hinchliff, S
 
 In R or Rstudio Console, use following codes to check if these required packages have been installed:
 
-"""
-$ require(ggtree)
+`"""$ require(ggtree)
 $ require(treeio)
 $ require(ggplot2)
 $ require(ape)
-$ require(optparse)
-"""
+$ require(optparse)"""`
 
 If any package is not installed, you can use "install.packages()" or "devtools::install_github()" for installing.
 
@@ -25,7 +23,7 @@ Run this R script in  R/Rstudio Terminal, or on the terminal of your local compu
 
 Run below code for help information on how to use this script, and understand its arguments.
 
-'$ Rscript plot_QC_ggtree.R -h'
+`$ Rscript plot_QC_ggtree.R -h`
 
 Options:
 
@@ -86,13 +84,12 @@ Totally, there are 14 arguments, the former three are mandatory required argrume
 
 ## Testing, and exemplified commands
 In directory "example/", quartet sampling outputs for a 188-taxon dataset of one oak clade are provided, and you can use them for testing. Some exemplified commands：
-#only set parameter value for three mandatory required argruments, and use defaults for plotting.
+Only set parameter value for three mandatory required argruments, and use defaults for plotting.
+`$ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi`
 
-$ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi
+Not show branch length for plotting when some abnormal long branches are presented in your tree.
 
-#not show branch length for plotting when some abnormal long branches are presented in your tree.
-
-$ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi -o ./example --branchlength none
+`$ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi -o ./example --branchlength none`
 
 #set proper parameter values for the size of tree branches, tip labels, node points, and custom branch labels.
 
