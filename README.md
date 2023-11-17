@@ -9,15 +9,15 @@ Publication: James B Pease, Joseph W Brown, Joseph F Walker, Cody E Hinchliff, S
 
 In R or Rstudio Console, use following codes to check if these required packages have been installed:
 
-`$ require(ggtree)
+        $ require(ggtree)
 
-$ require(treeio)
+        $ require(treeio)
 
-$ require(ggplot2)
+        $ require(ggplot2)
 
-$ require(ape)
+        $ require(ape)
 
-$ require(optparse)`
+        $ require(optparse)
 
 If any package is not installed, you can use "install.packages()" or "devtools::install_github()" for installing.
 
