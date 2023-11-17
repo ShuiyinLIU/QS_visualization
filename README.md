@@ -8,6 +8,7 @@ Publication: James B Pease, Joseph W Brown, Joseph F Walker, Cody E Hinchliff, S
 # R packages are required before running this script
 
 In R or Rstudio Console, use following codes to check if these required packages have been installed:
+
 $ require(ggtree)
 $ require(treeio)
 $ require(ggplot2)
@@ -21,9 +22,11 @@ If any package is not installed, you can use "install.packages()" or "devtools::
 Run this R script in  R/Rstudio Terminal, or on the terminal of your local computer with "Rscript.exe" into environment variable.
 
 Run below code for help information on how to use this script, and understand its arguments.
+
 $ Rscript plot_QC_ggtree.R -h
 
 Options:
+
         -c QCTREEFILE, --qctreefile=QCTREEFILE
                 Required, tree file with QC value labeled, that is one of outputs of QS method: default = NULL
 
@@ -81,16 +84,20 @@ Totally, there are 14 arguments, the former three are mandatory required argrume
 
 # Testing, and exemplified commands
 In directory "example/", quartet sampling outputs for a 188-taxon dataset of one oak clade are provided, and you can use them for testing. Some exemplified commands：
-#only set parameter value for three mandatory required argruments, and use defaults for plotting. 
+#only set parameter value for three mandatory required argruments, and use defaults for plotting.
+
 $ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi
 
 #not show branch length for plotting when some abnormal long branches are presented in your tree.
+
 $ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi -o ./example --branchlength none
 
 #set proper parameter values for the size of tree branches, tip labels, node points, and custom branch labels.
+
 $ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi -o ./example --pdfwidth 8 --pdfheight 11 --branchlength branch.length --branchsize 2 --tiplabsize 2 --nodepointsize 4 --qstextsize 2 --qstextvjust -0.5
 
 #when some tip labels are plotted outside panel, use "--xlimmin" and "--xlimmax" for zooming in or out.
+
 $ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi -o ./example --pdfwidth 8 --pdfheight 11 --branchlength branch.length --branchsize 1 --tiplabsize 2 --nodepointsize 4 --qstextsize 2 --qstextvjust -0.5 --xlimmin 0 --xlimmax 0.13
 
 # Marks
