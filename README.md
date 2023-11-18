@@ -19,7 +19,7 @@ If any package is not installed, you can use "install.packages()" or "devtools::
 
 ## Usage: Rscript plot_QC_ggtree.R [options]
 
-Run this R script in  R/Rstudio Terminal, or on the terminal of your local computer with "Rscript.exe" into environment variable.
+Run this R script in  R/Rstudio Terminal, or on the terminal of your local computer with "Rscript.exe" into environmental variable.
 
 Run below code for help information on how to use this script, and understand its arguments.
 
@@ -80,11 +80,12 @@ Options:
         -h, --help
                 Show this help message and exit
 
-Totally, there are 14 arguments, the former three are mandatory required argruments (i.e., the QC, QD, and QI labeled tree files), and the remaining are optional.
+Totally, there are 14 arguments, the former three are mandatory required argruments (i.e., the QC, QD, and QI labeled tree files), and the remaining are optional for adjusting output path, and plotting/visualization.
 
 ## Testing, and exemplified commands
 In directory "example/", quartet sampling outputs for a 188-taxon dataset of one oak clade are provided, and you can use them for testing. Some exemplified commands：
-Only set parameter value for three mandatory required argruments, and use defaults for plotting.
+
+Only set parameter value for three mandatory required argruments, and use defaults for plotting argruments.
 
 `$ Rscript plot_QC_ggtree.R -c example/RESULT.labeled.tre.qc -d example/RESULT.labeled.tre.qd -i example/RESULT.labeled.tre.qi`
 
